@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png">
+    <title>Login</title>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <main class="udy">
+        <header>
+            <h1>Login to Muzira</h1>
+        </header>
+  <div id="msgresponse"></div>
+        <div class="form-container">
+          
+            <form id="login-form">
+                <label for="username">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" id="loginbtn">Login</button>
+            </form>
+            <br>
+            <small>Don't have an account<stong><a href="signup.html">Sign Up</a></stong></small>
+        </div>
+    </main>
+    <script>
+     document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+   
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    var msgResponse = document.getElementById('msgresponse');
+          var loginbtn = document.getElementById('loginbtn');
+   loginbtn.disabled = true;
+        loginbtn.textContent = 'Please wait...';
+    try {
+       
+        const response = await fetch('https://music-app-rest-api.onrender.com/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        
+        });
+    
+        
+        if (response.ok) {
+            const data = await response.json();
+            msgResponse.innerHTML = '<span class="alert alert-success">Login successful... redirect(3secs)</span>';
+            setTimeout(() => {
+                    window.location.href = 'homepage.html';
+                }, 3000);
+        } else {
+            msgResponse.innerHTML = '<span class="alert alert-danger">Invalid Login Credentials</span>';
+            console.error('Login failed:', response.statusText);
+        }
+    } catch (error) {
+        msgResponse.innerHTML = '<span class="alert alert-danger">An error occurred. Please try again later.</span>';
+        console.error('An error occurred:', error);
+    }finally {
+           
+            loginbtn.disabled = false;
+            loginbtn.textContent = 'Login';
+        }
+});
+
+    
+    </script>
+</body>
+</html>
