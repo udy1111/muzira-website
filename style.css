@@ -200,13 +200,24 @@ nav ul li a:hover{
     color: black;
 }
 
-.music-container{
-    text-align: center;
-    top: 130px;
-    border-radius: 4px, 1px;
+.container{
+    border: 2px solid #660099;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    position: relative;
 }
 
-.music-container img{
+.image-box {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.image-box img {
     max-width: 100%;
     height: auto;
 }
