@@ -214,35 +214,38 @@ button {
 }
 
 .container {
-    border: 1px solid #660099;
-    box-sizing: content-box;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: normal;
-    position: relative;
+    margin-top: 10px;
     margin-left: 20%;
-    padding: 4px 10px;
-    cursor: pointer;
 }
 
 .image-box {
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Adds space between rows */
+    padding: 3px;
+    background-color: #333;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 .image-box img {
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to the images */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: auto;
+    border-radius: 1px;
 }
 
-.image-box img:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
-    transform: scale(1.05); /* Slightly zooms in on hover */
+@media (min-width: 768px) {
+    .image-box {
+        height: 70px; /* Set a consistent height for the boxes on medium to large screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .image-box {
+        height: 100; /* Allow the height to adjust for smaller screens */
+    }
 }
 
 .music-container {
@@ -339,7 +342,7 @@ h2 {
     align-items: normal;
     position: relative;
     margin-left: 20%;
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 20px;
     cursor: pointer;
     background-color: #392f4d;
@@ -400,3 +403,43 @@ h2 {
     transform: scale(1.2); /* Slightly increase size on hover */
 }
 
+.header {
+    padding: 15px;
+    position: relative;
+    z-index: 1000;
+    margin-left: 19%;
+}
+
+.header-left input {
+    border-radius: 20px;
+    border: 0px solid #ced4da;
+    padding-left: 35px;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.header-left input:focus {
+    width: 300px;
+    outline: none;
+}
+
+.header-left .bi-search {
+    position: relative;
+    left: 15px;
+}
+
+.header-right i {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-right i:hover {
+    color: #495057;
+}
+
+.header-right img {
+    border: 2px solid #6c757d;
+    padding: 2px;
+}
