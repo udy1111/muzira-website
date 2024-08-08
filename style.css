@@ -92,7 +92,7 @@ nav ul li a:hover{
     transition: bottom 1s, left 1s, right 1s;
 }
 
- .udy{
+.udy{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,9 +101,9 @@ nav ul li a:hover{
     flex-direction: column;
     margin-top: 150px;
     margin-bottom: 1 0px;
-  }
+}
 
-  .udy1{
+.udy1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,34 +112,34 @@ nav ul li a:hover{
     flex-direction: column;
     margin-top: 150px;
     margin-bottom: 1 0px;
-  }
+}
   
-  .form-container {
+.form-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
-  }
+}
   
-  form {
+form {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  form label {
+form label {
     margin: 10px 0 5px;
   }
   
-  form input {
+form input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  button {
+button {
     padding: 10px;
     background-color: #392f4d;
     color: white;
@@ -148,17 +148,7 @@ nav ul li a:hover{
     cursor: pointer;
   }
 
-  .side bar{
-    display: inline-block;
-    width: 100%;
-    height: fit-content;
-    margin: auto;
-    padding: 100px;
-    align-items: center;
-    justify-content: first baseline;
-  }
-
-  .sidebar{
+.sidebar {
     width: 263px;
     background-color: #660099;
     color: white;
@@ -166,13 +156,32 @@ nav ul li a:hover{
     position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     padding-top: 20px;
     overflow: hidden;
     z-index: 1;
     left: 0;
     top: 0;
 }
+
+.hello {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
 
 .udy2 {
     font-size: 24px;
@@ -204,7 +213,7 @@ nav ul li a:hover{
     color: black;
 }
 
-.container{
+.container {
     border: 1px solid #660099;
     box-sizing: content-box;
     display: inline-block;
@@ -218,25 +227,138 @@ nav ul li a:hover{
 }
 
 .image-box {
-    border: 1px solid #ddd;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
     text-align: center;
-    position: relative;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .image-box img {
     max-width: 100%;
-    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to the images */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.container .icon{
-    font-size: 20px;
-    color: #660099;
-    margin: opc 20px 0px 40px;
+.image-box img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+    transform: scale(1.05); /* Slightly zooms in on hover */
 }
 
-.container .icon.bi{
+.icon {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon i {
+    font-size: 24px;
+    margin: 0 15px;
+    color: #333;
     cursor: pointer;
-    outline: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon i:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.music-container {
+    border: 1px solid #660099;
+    box-sizing: content-box;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    position: relative;
+    margin-left: 20%;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+#recently-played-artist h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.image-box1 {
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.image-box1:hover {
+    transform: translateY(-10px); /* Lifts the image box slightly on hover */
+}
+
+.image-box1 img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to the images */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.image-box1 img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+    transform: scale(1.05); /* Slightly zooms in on hover */
+}
+
+.music-container2{
+    border: 1px solid #660099;
+    box-sizing: content-box;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    position: relative;
+    margin-left: 20%;
+    padding: 40px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Dark grey text color */
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+.image-box {
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.icon {
+    margin-top: 30px;
+}
+
+.icon i {
+    font-size: 24px;
+    color: #fff; /* Bootstrap primary color */
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon i:hover {
+    color: #333; /* Darker shade of primary color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
 }
