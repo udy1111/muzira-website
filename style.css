@@ -245,24 +245,6 @@ button {
     transform: scale(1.05); /* Slightly zooms in on hover */
 }
 
-.icon {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.icon i {
-    font-size: 24px;
-    margin: 0 15px;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.icon i:hover {
-    color: #007bff; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge on hover */
-}
-
 .music-container {
     border: 1px solid #660099;
     box-sizing: content-box;
@@ -346,19 +328,75 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
-.icon {
-    margin-top: 30px;
-}
-
-.icon i {
-    font-size: 24px;
-    color: #fff; /* Bootstrap primary color */
-    margin: 0 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
+.container5 {
+    max-width: 10000px;
+    margin: 0 auto;
+    border: 1px solid #660099;
+    box-sizing: content-box;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    position: relative;
+    margin-left: 20%;
+    margin-top: 5%;
+    padding: 20px;
     cursor: pointer;
+    background-color: #392f4d;
 }
 
-.icon i:hover {
-    color: #333; /* Darker shade of primary color on hover */
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
+/* Row spacing */
+.row {
+    margin-bottom: 20px;
 }
+
+/* Image styling */
+.img-fluid {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Column styling */
+.col-3 {
+    padding: 10px;
+}
+
+/* Icon Container outside the image container */
+.icon-wrapper {
+    max-width: 920px; /* Matches the max-width of the image container */
+    width: 100%; /* Full-width to match the container */
+    background-color: #660099; /* Light background color for contrast */
+    padding: 15px 0; /* Vertical padding for space */
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 1px; /* Rounded corners to match the images */
+    margin-top: 20px; /* Space between image container and icons */
+    margin: 10px auto 0 auto
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icon styling */
+.icon i {
+    font-size: 2rem; /* Increase icon size */
+    color: #fff; /* Darker color for better visibility */
+    margin: 0 20px; /* Spacing between icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on icons */
+.icon i:hover {
+    color: #392f4d; /* Change color on hover */
+    transform: scale(1.2); /* Slightly increase size on hover */
+}
+
